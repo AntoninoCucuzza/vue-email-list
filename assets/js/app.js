@@ -21,20 +21,24 @@ createApp({
   data() {
     return {
       message: 'we',
-      listMail: [] ,
+      listEmail: [] ,
+      counter: 0 ,
       
     }
   },    
-  mounted(){
+   mounted(){
 
     for (let i = 0; i < 10; i++) {
-
+     
         axios
             .get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then(response => {
                 console.log(response);
 
-                this.listMail.push(response.data.response)
+                this.listEmail.push(response.data.response)
+               
+                this.counter++
+                console.log(this.counter);
             })
     }
 

@@ -8,9 +8,9 @@
 <body>
     
     <div id="app">{{ message }}
-        <ul>
-            <li v-for="email in listMail">
-                {{email}}
+        <ul v-if="counter >= 10">
+            <li v-for="email in listEmail">
+              {{email}}
             </li>
         </ul>
     </div>
