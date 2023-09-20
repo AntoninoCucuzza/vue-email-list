@@ -8,7 +8,7 @@
 <body>
     
     <div id="app">{{ message }}
-        <ul v-if="counter >= 10">
+        <ul v-if="listEmail.length >= 10">
             <li v-for="email in listEmail">
               {{email}}
             </li>

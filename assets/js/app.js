@@ -21,9 +21,7 @@ createApp({
   data() {
     return {
       message: 'we',
-      listEmail: [] ,
-      counter: 0 ,
-      
+      listEmail: [] ,    
     }
   },    
    mounted(){
@@ -35,10 +33,7 @@ createApp({
             .then(response => {
                 console.log(response);
 
-                this.listEmail.push(response.data.response)
-               
-                this.counter++
-                console.log(this.counter);
+                this.listEmail.push(response.data.response)        
             })
     }
 
