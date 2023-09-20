@@ -20,12 +20,12 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      message: 'Hello Vue!'
+      message: 'we',
+      listMail: [] ,
+      
     }
   },    
-  mounted() {
-    console.log('caricata');
-
+  mounted(){
 
     for (let i = 0; i < 10; i++) {
 
@@ -34,6 +34,7 @@ createApp({
             .then(response => {
                 console.log(response);
 
+                this.listMail.push(response.data.response)
             })
     }
 
